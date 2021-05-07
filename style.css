@@ -193,6 +193,8 @@ h2{
     }
 }
 
+/* iPad Pro (12.9"); width: 1024px */
+
 @media(max-width: 954px){
     .cardP{
         width: 85%;
@@ -229,7 +231,29 @@ h2{
         top: 5%;
     }
 }
+/* Kindle Fire HDX Linus; width: 800px */
+        /* perhaps start flex column-reverse at this width */
 
+/* Meida queries for max-width =< 770px*/
+        /* iPad = width:768px */
+@media(max-width: 770px){
+    .headerCard{
+        flex-direction: column-reverse;
+        height: 90vh;
+        left: 9%;
+        top: 5%;
+    }
+    .cardTBackground, .cardImgBox, h1{
+        width: 100%;
+    }
+    .cardText{
+        left: 15%;
+        top: 10%;
+    }
+    .cardP{
+        width: 95%;
+    }
+}
 
 
 /* not sure if I should adujust left: % for scaling */
