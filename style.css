@@ -48,14 +48,16 @@ header{
 }
 
 .headerCard{
+    /* background-image: url(../frontend-mentor-challenge1-05-04-2021-get-insights-card/images/image-header-desktop.jpg); */
     height: 60vh;
     /* margin-top: 25%; */
     position: absolute;
     left: 10%;
     top: 20%;
+    display: flex;
     /* dont't know why margin-top is pushing header(parent) down 25% */
 }
-.cardBackground{
+.cardTBackground{
     background-color: hsl(244, 38%, 16%);
     height: 100%;
     width: 50%;
@@ -70,7 +72,7 @@ header{
     /* expected all around margin to add to .wrapper; Didn't expect that adding only top and bottom margin would eliminate left margin */
     position: absolute;
     left: 15%;
-    top: 18%;
+    top: 16%;
 }
 
 h1, .num{
@@ -78,7 +80,8 @@ h1, .num{
     color: hsl(0, 0%, 100%);
     font-family: 'Inter', sans-serif;
     /* font-size: calc(0.75rem * 0.9) */
-    font-size: calc(2em * 0.80);
+    /* font-size: calc(2em * 0.80); */
+    font-size: calc(2rem * 0.8);
     /* not sure it .num shares same font-family as h1 */
     /* margin-bottom: 5%; */
 }
@@ -113,7 +116,9 @@ h2, p{
 
 h2{
     font-family: 'Lexend Deca', sans-serif;
-    font-size: calc(0.75rem * 0.9);
+    font-family: 'Inter', sans-serif;
+
+    font-size: calc(0.75rem * 0.8); 
     text-transform: uppercase;
 }
 
@@ -124,12 +129,107 @@ h2{
 }
 
 .num{
-    font-size: calc(1rem * 0.9);
+    font-size: calc(1rem * 0.8);
+    font-size: 1.1rem;
     font-weight: 700;
+    display: flex;
+}
 
+.cardImgBox{
+    background-color: teal;
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+/* .cardImgBox p{
+    display: none;
+} */
+
+.cardImgFilter{
+    background-color: hsla(278, 70%, 35%, 0.6);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* .cardImgFilter p{
+    display: none;
+} */
+
+/* .cardImgFilter p{
+    background-color: teal;
+    height: 100%;
+} */
+
+.cardImg{
+    /* background-color: wheat; */
+    background-image: url(./images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    /* z-index: 50; */
 }
 
                                         /* Main */
 /* main{
     background-image: ;
 } */
+
+                                        /* MEDIA QUERIES */
+
+
+/* Media queries for .cardText */
+@media(max-width: 1165px){
+    .cardText{
+        top: 12%;
+    }
+}
+
+@media(max-width: 1156px){
+    .cardText{
+        top: 9%;
+    }
+}
+
+@media(max-width: 954px){
+    .cardP{
+        width: 85%;
+    }
+    .cardText{
+        top: 10%;
+    }
+}
+
+@media(max-width: 842px){
+    .cardText{
+        top: 8%;
+    }
+}
+
+@media(max-width: 817px){
+    h1{
+        width:95%;
+    }
+    .cardP{
+        width: 75%;
+    }
+    .cardText{
+        left: 13%;
+        top: 8%
+    }
+}
+
+@media(max-width: 774px){
+    .cardP{
+        margin-bottom: 5%;
+    }
+    .cardText{
+        top: 5%;
+    }
+}
+
+
+
+/* not sure if I should adujust left: % for scaling */
