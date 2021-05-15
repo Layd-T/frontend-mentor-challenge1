@@ -51,25 +51,31 @@ header{
     /* background-image: url(../frontend-mentor-challenge1-05-04-2021-get-insights-card/images/image-header-desktop.jpg); */
     height: 60vh;
     /* margin-top: 25%; */
+    /* border-radius: 50%; */
+            /* Don't know why border-radius doesn't work on headerCard <div> */
     position: absolute;
     left: 10%;
     top: 20%;
     display: flex;
-    /* dont't know why margin-top is pushing header(parent) down 25% */
+            /* dont't know why margin-top is pushing header(parent) down 25% */
+            /* I think proportions are off for the card size. in the desigh the dark blue background is thicker at top and bottom than at sides. */
 }
 .cardTBackground{
     background-color: hsl(244, 38%, 16%);
+    border-bottom-left-radius: 2%;
+    border-top-left-radius: 2%;
     height: 100%;
     width: 50%;
     /* margin: 25vh 0 0 9vw; */
-    /* choose vw over percentage since not the child of body/html but is 50% of body */
+            /* choose vw over percentage since not the child of body/html but is 50% of body */
     /* margin: 20%; */
     position: relative;
+    
 }
 
 .cardText{
     /* margin: 10%; */ 
-    /* expected all around margin to add to .wrapper; Didn't expect that adding only top and bottom margin would eliminate left margin */
+            /* expected all around margin to add to .wrapper; Didn't expect that adding only top and bottom margin would eliminate left margin */
     position: absolute;
     left: 15%;
     top: 16%;
@@ -82,7 +88,7 @@ h1, .num{
     /* font-size: calc(0.75rem * 0.9) */
     /* font-size: calc(2em * 0.80); */
     font-size: calc(2rem * 0.8);
-    /* not sure it .num shares same font-family as h1 */
+            /* not sure it .num shares same font-family as h1 */
     /* margin-bottom: 5%; */
 }
 
@@ -136,7 +142,7 @@ h2{
 }
 
 .cardImgBox{
-    background-color: teal;
+    /* background-color: teal; */
     height: 100%;
     width: 50%;
     position: relative;
@@ -148,6 +154,8 @@ h2{
 
 .cardImgFilter{
     background-color: hsla(278, 70%, 35%, 0.6);
+    border-bottom-right-radius: 2%;
+    border-top-right-radius: 2%;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -167,6 +175,8 @@ h2{
     background-image: url(./images/image-header-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom-right-radius: 2%;
+    border-top-right-radius: 2%;
     height: 100%;
     width: 100%;
     /* z-index: 50; */
@@ -243,6 +253,11 @@ h2{
         left: 9%;
         top: 5%;
     }
+    .cardTBackground{
+        border-bottom-left-radius: 2%;
+        border-bottom-right-radius: 2%;
+        border-top-left-radius: 0%;
+    }
     .cardTBackground, .cardImgBox, h1{
         width: 100%;
     }
@@ -252,6 +267,12 @@ h2{
     }
     .cardP{
         width: 95%;
+    }
+    .cardImgFilter, .cardImg{
+        border-top-left-radius: 2%;
+        border-top-right-radius: 2%;
+        /* border-top-right-radius: 2%; */
+        border-bottom-right-radius: 0%;
     }
 }
 
